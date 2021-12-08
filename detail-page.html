@@ -2,270 +2,236 @@
 <html lang="en">
 
 <head>
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-	<meta name="description" content="Find easily a doctor and book online an appointment">
-	<meta name="author" content="Ansonika">
-	<title>Express Vet | Reservar</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Find easily a doctor and book online an appointment">
+    <meta name="author" content="Ansonika">
+    <title>Express Vet | Reservar</title>
 
-	<!-- Favicons-->
-	<link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
-	<link rel="apple-touch-icon" type="image/x-icon" href="img/apple-touch-icon-57x57-precomposed.png">
-	<link rel="apple-touch-icon" type="image/x-icon" sizes="72x72" href="img/apple-touch-icon-72x72-precomposed.png">
-	<link rel="apple-touch-icon" type="image/x-icon" sizes="114x114" href="img/apple-touch-icon-114x114-precomposed.png">
-	<link rel="apple-touch-icon" type="image/x-icon" sizes="144x144" href="img/apple-touch-icon-144x144-precomposed.png">
-    
+    <!-- Favicons-->
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" type="image/x-icon" href="img/apple-touch-icon-57x57-precomposed.png">
+    <link rel="apple-touch-icon" type="image/x-icon" sizes="72x72" href="img/apple-touch-icon-72x72-precomposed.png">
+    <link rel="apple-touch-icon" type="image/x-icon" sizes="114x114" href="img/apple-touch-icon-114x114-precomposed.png">
+    <link rel="apple-touch-icon" type="image/x-icon" sizes="144x144" href="img/apple-touch-icon-144x144-precomposed.png">
+
     <!-- GOOGLE WEB FONT -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
-	<!-- BASE CSS -->
-	<link href="css/bootstrap.min.css" rel="stylesheet">
-	<link href="css/style.css" rel="stylesheet">
-	<link href="css/menu.css" rel="stylesheet">
-	<link href="css/vendors.css" rel="stylesheet">
-	<link href="css/icon_fonts/css/all_icons_min.css" rel="stylesheet">
-    
-	<!-- YOUR CUSTOM CSS -->
-	<link href="css/custom.css" rel="stylesheet">
+    <!-- BASE CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/menu.css" rel="stylesheet">
+    <link href="css/vendors.css" rel="stylesheet">
+    <link href="css/icon_fonts/css/all_icons_min.css" rel="stylesheet">
+
+    <!-- YOUR CUSTOM CSS -->
+    <link href="css/custom.css" rel="stylesheet">
 
 </head>
 
 <body>
 
-	<div class="layer"></div>
-	<!-- Mobile menu overlay mask -->
+    <div class="layer"></div>
+    <!-- Mobile menu overlay mask -->
 
-	<div id="preloader">
-		<div data-loader="circle-side"></div>
-	</div>
-	<!-- End Preload -->
-    
-	<header class="header_sticky">
-		<div class="container">
-			<div class="row">
-				<div class="col-lg-3 col-6">
-					<div id="logo_home">
-						<h1><a href="index.html" title="Findoctor">Express Vet</a></h1>
-					</div>
-				</div>
-				<nav class="col-lg-9 col-6">
-					<a class="cmn-toggle-switch cmn-toggle-switch__htx open_close" href="#0"><span>Menu mobile</span></a>
-					<ul id="top_access">
-						<li><a href="login.html"><i class="pe-7s-user"></i></a></li>
-					</ul>
-					<div class="main-menu">
-						<ul>
-							<li class="submenu">
-								<a href="index.html" class="show-submenu">Inicio</a>
-							</li>
-							<li class="submenu">
-								<a href="list.html" class="show-submenu">Servicios</a>
-							</li>
-							<li><a href="#0">Acerca de</a></li>
-						</ul>
-					</div>
-					<!-- /main-menu -->
-				</nav>
-			</div>
-		</div>
-		<!-- /container -->
-	</header>
-	<!-- /header -->
-	
-	<main>
-		<div id="breadcrumb">
-			<div class="container">
-				<ul>
-					<li><a href="index.html">Inicio</a></li>
-					<li><a href="list.html">Servicios</a></li>
-					<li>Reservar</li>
-				</ul>
-			</div>
-		</div>
-		<!-- /breadcrumb -->
+    <div id="preloader">
+        <div data-loader="circle-side"></div>
+    </div>
+    <!-- End Preload -->
 
-		<div class="container margin_60">
-			<div class="row">
-				<aside class="col-xl-4 col-lg-4" id="sidebar">
-					<div class="box_general_3 booking">
-						<form>
-							<div class="title">
-							<h3>Reserva tu cita</h3>
-							<small>Lunes a Domingo 09.00am-06.00pm</small>
-							</div>
-							<div class="row">
-								<div class="col-6">
-									<div class="form-group">
-										<input class="form-control" type="text" id="booking_date" data-lang="en" data-min-year="2017" data-max-year="2020" data-disabled-days="10/17/2017,11/18/2017">
-									</div>
-								</div>
-								<div class="col-6">
-									<div class="form-group">
-										<input class="form-control" type="text" id="booking_time" value="9:00 am">
-									</div>
-								</div>
-							</div>
-							<!-- /row -->
-							<ul class="treatments clearfix">
-								<li>
-									<div class="checkbox">
-										<input type="checkbox" class="css-checkbox" id="visit2" name="visit2">
-										<label for="visit2" class="css-label">Baño para perros pequeños<strong>$55</strong></label>
-									</div>
-								</li>
-							</ul>
-							<hr>
-							<a href="booking-page.html" class="btn_1 full-width">Reserva ahora</a>
-						</form>
-					</div>
-					<!-- /box_general -->
-				</aside>
-				<div class="col-xl-8 col-lg-8">
-					<div id="section_2">
-						<div class="box_general_3">
-							<div class="reviews-container">
-								<div class="row">
-									<div class="col-lg-3">
-										<div id="review_summary">
-											<strong>4.7</strong>
-											<div class="rating">
-												<i class="icon_star voted"></i><i class="icon_star voted"></i><i class="icon_star voted"></i><i class="icon_star voted"></i><i class="icon_star"></i>
-											</div>
-											<small>Based on 4 reviews</small>
-										</div>
-									</div>
-									<div class="col-lg-9">
-										<div class="row">
-											<div class="col-lg-10 col-9">
-												<div class="progress">
-													<div class="progress-bar" role="progressbar" style="width: 90%" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
-												</div>
-											</div>
-											<div class="col-lg-2 col-3"><small><strong>5 stars</strong></small></div>
-										</div>
-										<!-- /row -->
-										<div class="row">
-											<div class="col-lg-10 col-9">
-												<div class="progress">
-													<div class="progress-bar" role="progressbar" style="width: 95%" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100"></div>
-												</div>
-											</div>
-											<div class="col-lg-2 col-3"><small><strong>4 stars</strong></small></div>
-										</div>
-										<!-- /row -->
-										<div class="row">
-											<div class="col-lg-10 col-9">
-												<div class="progress">
-													<div class="progress-bar" role="progressbar" style="width: 60%" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
-												</div>
-											</div>
-											<div class="col-lg-2 col-3"><small><strong>3 stars</strong></small></div>
-										</div>
-										<!-- /row -->
-										<div class="row">
-											<div class="col-lg-10 col-9">
-												<div class="progress">
-													<div class="progress-bar" role="progressbar" style="width: 20%" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"></div>
-												</div>
-											</div>
-											<div class="col-lg-2 col-3"><small><strong>2 stars</strong></small></div>
-										</div>
-										<!-- /row -->
-										<div class="row">
-											<div class="col-lg-10 col-9">
-												<div class="progress">
-													<div class="progress-bar" role="progressbar" style="width: 0" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
-												</div>
-											</div>
-											<div class="col-lg-2 col-3"><small><strong>1 stars</strong></small></div>
-										</div>
-										<!-- /row -->
-									</div>
-								</div>
-								<!-- /row -->
+    <header class="header_sticky">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-6">
+                    <div id="logo_home">
+                        <h1><a href="index.html" title="Findoctor">Express Vet</a></h1>
+                    </div>
+                </div>
+                <nav class="col-lg-9 col-6">
+                    <a class="cmn-toggle-switch cmn-toggle-switch__htx open_close" href="#0"><span>Menu mobile</span></a>
+                    <ul id="top_access">
+                        <li><a href="login.html"><i class="pe-7s-user"></i></a></li>
+                    </ul>
+                    <div class="main-menu">
+                        <ul>
+                            <li class="submenu">
+                                <a href="index.html" class="show-submenu">Inicio</a>
+                            </li>
+                            <li class="submenu">
+                                <a href="list.html" class="show-submenu">Servicios</a>
+                            </li>
+                            <li><a href="#0">Acerca de</a></li>
+                            <li style="display: none;" id="profile"><a href="./profile.html">Mi perfil</a></li>
+                            <li style="display: none;" id="logout"><a href="javascript:logOut()">Cerrar sesion</a></li>
+                        </ul>
+                    </div>
+                    <!-- /main-menu -->
+                </nav>
+            </div>
+        </div>
+        <!-- /container -->
+    </header>
+    <!-- /header -->
 
-								<hr>
+    <main>
+        <div id="breadcrumb">
+            <div class="container">
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="list.html">Servicios</a></li>
+                    <li>Reservar</li>
+                </ul>
+            </div>
+        </div>
+        <!-- /breadcrumb -->
 
-								<div class="review-box clearfix">
-									<figure class="rev-thumb"><img src="http://via.placeholder.com/150x150.jpg" alt="">
-									</figure>
-									<div class="rev-content">
-										<div class="rating">
-											<i class="icon_star voted"></i><i class="icon_star voted"></i><i class="icon_star voted"></i><i class="icon_star voted"></i><i class="icon_star"></i>
-										</div>
-										<div class="rev-info">
-											Admin – April 03, 2016:
-										</div>
-										<div class="rev-text">
-											<p>
-												Sed eget turpis a pede tempor malesuada. Vivamus quis mi at leo pulvinar hendrerit. Cum sociis natoque penatibus et magnis dis
-											</p>
-										</div>
-									</div>
-								</div>
-								<!-- End review-box -->
+        <div class="container margin_60">
+            <div class="row">
+                <aside class="col-xl-4 col-lg-4" id="sidebar">
+                    <div class="box_general_3 booking">
+                        <form>
+                            <div class="title">
+                                <h3>Reserva tu cita</h3>
+                                <small>Lunes a Domingo 09.00am-06.00pm</small>
+                            </div>
+                            <div class="row">
+                                <div class="col-6">
+                                    <div class="form-group">
+                                        <input class="form-control" type="text" id="booking_date" data-lang="en" data-min-year="2017" data-max-year="2020" data-disabled-days="10/17/2017,11/18/2017">
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="form-group">
+                                        <input class="form-control" type="text" id="booking_time" value="9:00 am">
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- /row -->
+                            <ul class="treatments clearfix">
+                                <li id="fillPrices">
 
-								<div class="review-box clearfix">
-									<figure class="rev-thumb"><img src="http://via.placeholder.com/150x150.jpg" alt="">
-									</figure>
-									<div class="rev-content">
-										<div class="rating">
-											<i class="icon-star voted"></i><i class="icon_star voted"></i><i class="icon_star voted"></i><i class="icon_star voted"></i><i class="icon_star"></i>
-										</div>
-										<div class="rev-info">
-											Ahsan – April 01, 2016
-										</div>
-										<div class="rev-text">
-											<p>
-												Sed eget turpis a pede tempor malesuada. Vivamus quis mi at leo pulvinar hendrerit. Cum sociis natoque penatibus et magnis dis
-											</p>
-										</div>
-									</div>
-								</div>
-								<!-- End review-box -->
 
-								<div class="review-box clearfix">
-									<figure class="rev-thumb"><img src="http://via.placeholder.com/150x150.jpg" alt="">
-									</figure>
-									<div class="rev-content">
-										<div class="rating">
-											<i class="icon-star voted"></i><i class="icon_star voted"></i><i class="icon_star voted"></i><i class="icon_star voted"></i><i class="icon_star"></i>
-										</div>
-										<div class="rev-info">
-											Sara – March 31, 2016
-										</div>
-										<div class="rev-text">
-											<p>
-												Sed eget turpis a pede tempor malesuada. Vivamus quis mi at leo pulvinar hendrerit. Cum sociis natoque penatibus et magnis dis
-											</p>
-										</div>
-									</div>
-								</div>
-								<!-- End review-box -->
-							</div>
-							<!-- End review-container -->
-							<hr>
-							<div class="text-right"><a href="submit-review.html" class="btn_1">Calificar</a></div>
-						</div>
-					</div>
-				</div>
-				<!-- /col -->
-				
-				<!-- /asdide -->
-			</div>
-			<!-- /row -->
-		</div>
-		<!-- /container -->
-	</main>
-	<!-- /main -->
+                                </li>
+                            </ul>
+                            <hr>
+                            <a id="res" class="btn_1 full-width">Reserva ahora</a>
+                        </form>
+                    </div>
+                    <!-- /box_general -->
+                </aside>
+                <div class="col-xl-8 col-lg-8">
+                    <div id="section_2">
+                        <div class="box_general_3">
+                            <div class="reviews-container">
+                                <div class="row">
+                                    <div class="col-lg-3">
+                                        <div id="review_summary">
+                                            <strong>4.7</strong>
+                                            <div class="rating">
+                                                <i class="icon_star voted"></i><i class="icon_star voted"></i><i class="icon_star voted"></i><i class="icon_star voted"></i><i class="icon_star"></i>
+                                            </div>
+                                            <small>Based on 4 reviews</small>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-9">
+                                        <div class="row">
+                                            <div class="col-lg-10 col-9">
+                                                <div class="progress">
+                                                    <div class="progress-bar" role="progressbar" style="width: 90%" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-2 col-3"><small><strong>5 stars</strong></small></div>
+                                        </div>
+                                        <!-- /row -->
+                                        <div class="row">
+                                            <div class="col-lg-10 col-9">
+                                                <div class="progress">
+                                                    <div class="progress-bar" role="progressbar" style="width: 95%" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100"></div>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-2 col-3"><small><strong>4 stars</strong></small></div>
+                                        </div>
+                                        <!-- /row -->
+                                        <div class="row">
+                                            <div class="col-lg-10 col-9">
+                                                <div class="progress">
+                                                    <div class="progress-bar" role="progressbar" style="width: 60%" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-2 col-3"><small><strong>3 stars</strong></small></div>
+                                        </div>
+                                        <!-- /row -->
+                                        <div class="row">
+                                            <div class="col-lg-10 col-9">
+                                                <div class="progress">
+                                                    <div class="progress-bar" role="progressbar" style="width: 20%" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"></div>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-2 col-3"><small><strong>2 stars</strong></small></div>
+                                        </div>
+                                        <!-- /row -->
+                                        <div class="row">
+                                            <div class="col-lg-10 col-9">
+                                                <div class="progress">
+                                                    <div class="progress-bar" role="progressbar" style="width: 0" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-2 col-3"><small><strong>1 stars</strong></small></div>
+                                        </div>
+                                        <!-- /row -->
+                                    </div>
+                                </div>
+                                <!-- /row -->
 
-	<div id="toTop"></div>
-	<!-- Back to top button -->
+                                <hr>
 
-	<!-- COMMON SCRIPTS -->
-	<script src="js/jquery-3.5.1.min.js"></script>
-	<script src="js/common_scripts.min.js"></script>
-	<script src="js/functions.js"></script>
+                                <div class="review-box clearfix">
+                                    <figure class="rev-thumb"><img src="http://via.placeholder.com/150x150.jpg" alt="">
+                                    </figure>
+                                    <div class="rev-content">
+                                        <div class="rating">
+                                            <i class="icon_star voted"></i><i class="icon_star voted"></i><i class="icon_star voted"></i><i class="icon_star voted"></i><i class="icon_star"></i>
+                                        </div>
+                                        <div class="rev-info">
+                                            Admin – April 03, 2016:
+                                        </div>
+                                        <div class="rev-text">
+                                            <p>
+                                                Sed eget turpis a pede tempor malesuada. Vivamus quis mi at leo pulvinar hendrerit. Cum sociis natoque penatibus et magnis dis
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- End review-box -->
+                            </div>
+                            <!-- End review-container -->
+                            <hr>
+                            <div class="text-right"><a href="submit-review.html" class="btn_1">Calificar</a></div>
+                        </div>
+                    </div>
+                </div>
+                <!-- /col -->
+
+                <!-- /asdide -->
+            </div>
+            <!-- /row -->
+        </div>
+        <!-- /container -->
+    </main>
+    <!-- /main -->
+
+    <div id="toTop"></div>
+    <!-- Back to top button -->
+
+    <!-- COMMON SCRIPTS -->
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="js/jquery-3.5.1.min.js"></script>
+    <script src="./js/displaySession.js"></script>
+    <script src="./js/detail-page.js"></script>
+    <script src="js/common_scripts.min.js"></script>
+    <script src="js/functions.js"></script>
 </body>
+
 </html>
