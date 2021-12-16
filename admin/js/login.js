@@ -1,12 +1,12 @@
 console.log("load");
 
-$('#loginForm').submit(function (e) { 
+$('#loginForm').submit(function(e) {
     e.preventDefault();
-    
+
     const email = $("#email").val();
     const password = $("#password").val();
 
-    if ( email.length == 0 || password.length == 0){
+    if (email.length == 0 || password.length == 0) {
         Swal.fire({
             title: 'Error!',
             text: 'Necesitas llenar todos los campos',
@@ -21,7 +21,7 @@ $('#loginForm').submit(function (e) {
 
 
 
-const fetchLogin = async(email, password)=>{
+const fetchLogin = async(email, password) => {
     let fetchData = {
         method: 'POST',
         headers: {
@@ -38,12 +38,12 @@ const fetchLogin = async(email, password)=>{
     });
     swal.showLoading();
 
-    await fetch('http://localhost:8080/api/auth/login', fetchData)
+    await fetch('https://empresaurios.herokuapp.com/api/auth/login', fetchData)
         .then((res) => res.json())
         .then((data) => {
 
             if (data.errors) {
-                
+
                 let err = "";
                 data.errors.map(error => err = err + " " + error.msg)
                 swal.close();
@@ -53,8 +53,8 @@ const fetchLogin = async(email, password)=>{
                     text: err,
                 })
             }
-            
-            if (data.permissions != 'ADMIN_USER'){
+
+            if (data.permissions != 'ADMIN_USER') {
 
                 swal.close();
                 Swal.fire({

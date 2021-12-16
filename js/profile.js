@@ -7,7 +7,7 @@ const fetchUser = async() => {
         }
     }
 
-    await fetch('http://localhost:8080/api/auth/validateJWT', fetchData)
+    await fetch('https://empresaurios.herokuapp.com/api/auth/validateJWT', fetchData)
         .then((res) => res.json())
         .then(({ authUser }) => {
 
@@ -57,7 +57,7 @@ const fetchUpdateUser = async(name, tel) => {
         })
     }
 
-    await fetch('http://localhost:8080/api/user', fetchData)
+    await fetch('https://empresaurios.herokuapp.com/api/user', fetchData)
         .then((res) => res.json())
         .then((data) => {
 

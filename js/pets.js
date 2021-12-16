@@ -44,7 +44,7 @@ const fetchRegisterPet = async(type, race, size, sex, age, name) => {
     });
     swal.showLoading();
 
-    await fetch('http://localhost:8080/api/pet', fetchData)
+    await fetch('https://empresaurios.herokuapp.com/api/pet', fetchData)
         .then((res) => res.json())
         .then((data) => {
 
@@ -108,7 +108,7 @@ const loadPets = async() => {
     });
     swal.showLoading();
 
-    await fetch('http://localhost:8080/api/pet/owner', fetchData)
+    await fetch('https://empresaurios.herokuapp.com/api/pet/owner', fetchData)
         .then((res) => res.json())
         .then((data) => {
 

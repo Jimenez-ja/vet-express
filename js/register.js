@@ -55,7 +55,7 @@ const fetchRegister = async(name, email, password) => {
     });
     swal.showLoading();
 
-    await fetch('http://localhost:8080/api/user', fetchData)
+    await fetch('https://empresaurios.herokuapp.com/api/user', fetchData)
         .then((res) => res.json())
         .then((data) => {
 

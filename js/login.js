@@ -35,7 +35,7 @@ const fetchLogin = async(email, password) => {
     // });
     // swal.showLoading();
 
-    await fetch('http://localhost:8080/api/auth/login', fetchData)
+    await fetch('https://empresaurios.herokuapp.com/api/auth/login', fetchData)
         .then((res) => res.json())
         .then((data) => {
 

@@ -15,12 +15,12 @@ const fetchValidate = async() => {
         }
     }
 
-    await fetch('http://localhost:8080/api/auth/validateJWT', fetchData)
+    await fetch('https://empresaurios.herokuapp.com/api/auth/validateJWT', fetchData)
         .then((res) => res.json())
-        .then(({authUser}) => {
+        .then(({ authUser }) => {
 
 
-            if( authUser.rol != "ADMIN_USER") {
+            if (authUser.rol != "ADMIN_USER") {
                 localStorage.removeItem('expressvet-token');
                 window.location = "./login.html";
             }

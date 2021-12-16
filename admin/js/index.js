@@ -1,4 +1,10 @@
-const fetchCitas = async()=>{
+const fetchCitas = async() => {
+
+
+    swal.fire({
+        title: 'Cargando...'
+    });
+    swal.showLoading();
 
     let fetchData = {
         method: 'GET',
@@ -8,57 +14,98 @@ const fetchCitas = async()=>{
         }
     }
 
-    swal.fire({
-        title: 'Cargando...'
-    });
-    swal.showLoading();
-
-    await fetch('http://localhost:8080/api/payment/appointmentsMonthly', fetchData)
+    await fetch('https://empresaurios.herokuapp.com/api/payment/appointmentsMonthly', fetchData)
         .then((res) => res.json())
-        .then(({total}) => {
+        .then(({ total }) => {
+
 
             $("#fillAppointments").append(`Tienes ${total} citas para este mes`);
 
-            // if (data.errors) {
 
-            //     let err = "";
-            //     data.errors.map(error => err = err + " " + error.msg)
-            //     swal.close();
-            //     return Swal.fire({
-            //         icon: 'error',
-            //         title: 'Error',
-            //         text: err,
-            //     })
-            // }
+        })
+    fetchData = {
+        method: 'GET',
+        headers: {
+            "Content-Type": "application/json",
+            "x-token": localStorage.getItem('expressvet-token')
+        }
+    }
 
-            // if (data.token) {
-            //     swal.close();
+    await fetch('https://empresaurios.herokuapp.com/api/review/reviewsMonthly', fetchData)
+        .then((res) => res.json())
+        .then(({ total }) => {
 
-            //     localStorage.setItem('expressvet-token', data.token);
 
-            //     return window.location = "./";
-
-            // }
-
-            // if (data.err) {
-            //     swal.close();
-            //     return Swal.fire({
-            //         icon: 'error',
-            //         title: 'Error',
-            //         text: "Correo/contraseña incorrecto",
-            //     })
-            // }
-
-            swal.close();
-            // Swal.fire({
-            //     icon: 'error',
-            //     title: 'Error',
-            //     text: data,
-            // })
-
+            $("#fillReviews").append(`Tienes ${total} calificaciones para este mes`);
         })
 
 
+    fetchData = {
+        method: 'PUT',
+        headers: {
+            "Content-Type": "application/json",
+            "x-token": localStorage.getItem('expressvet-token')
+        }
+    }
+
+    await fetch('https://empresaurios.herokuapp.com/api/payment', fetchData)
+        .then((res) => res.json())
+        .then(({ earnings }) => {
+
+            $("#fillEarnings").append(`$${earnings[0].total}.00 MXN `);
+        })
+
+
+
+    fetchData = {
+        method: 'GET',
+        headers: {
+            "Content-Type": "application/json",
+            "x-token": localStorage.getItem('expressvet-token')
+        }
+    }
+
+    await fetch('https://empresaurios.herokuapp.com/api/user/all', fetchData)
+        .then((res) => res.json())
+        .then(({ total }) => {
+
+
+            $("#fillUsers").append(`${total}`);
+        })
+
+    fetchData = {
+        method: 'GET',
+        headers: {
+            "Content-Type": "application/json",
+            "x-token": localStorage.getItem('expressvet-token')
+        }
+    }
+
+    await fetch('https://empresaurios.herokuapp.com/api/payment/all', fetchData)
+        .then((res) => res.json())
+        .then(({ total }) => {
+
+
+            $("#fillAllAppoinments").append(`${total}`);
+        })
+
+    fetchData = {
+        method: 'GET',
+        headers: {
+            "Content-Type": "application/json",
+            "x-token": localStorage.getItem('expressvet-token')
+        }
+    }
+
+    await fetch('https://empresaurios.herokuapp.com/api/review', fetchData)
+        .then((res) => res.json())
+        .then(({ total }) => {
+
+
+            $("#fillAllReviews").append(`${total}`);
+        })
+
+    swal.close();
 }
 
 fetchCitas();

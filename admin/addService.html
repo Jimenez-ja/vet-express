@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="Ansonika">
-    <title>Express vet | Citas</title>
+    <title>Express vet | Dashboard</title>
 
     <!-- Favicons-->
     <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
@@ -29,7 +29,9 @@
     <link href="css/admin.css" rel="stylesheet">
     <!-- Your custom styles -->
     <link href="css/admin.css" rel="stylesheet">
+
     <script src="./js/validateSession.js"></script>
+
 
 </head>
 
@@ -38,8 +40,8 @@
     <nav class="navbar navbar-expand-lg navbar-dark bg-default fixed-top" id="mainNav">
         <a class="navbar-brand" href="index.html"><img src="img/expressvet.jpg" data-retina="true" alt="" width="100" height="36"></a>
         <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-  <span class="navbar-toggler-icon"></span>
-</button>
+    <span class="navbar-toggler-icon"></span>
+    </button>
         <div class="collapse navbar-collapse" id="navbarResponsive">
             <ul class="navbar-nav navbar-sidenav" id="exampleAccordion">
                 <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Dashboard">
@@ -75,68 +77,60 @@
     </nav>
     <!-- /Navigation-->
     <div class="content-wrapper">
-        <div class="container-fluid">
-
-            <div class="box_general">
-                <h4>Citas</h4>
-                <div class="col-12">
-                    <table class="table">
-                        <thead>
-                            <tr>
-                                <th scope="col">ID</th>
-                                <th scope="col">Usuario</th>
-                                <th scope="col">Estado del pago</th>
-                                <th scope="col">Fecha</th>
-                                <th scope="col">Hora</th>
-                                <th scope="col">Servicio</th>
-                                <th scope="col">Monto</th>
-                                <th scope="col">Estado de la cita</th>
-                                <th scope="col">Accion</th>
-                            </tr>
-                        </thead>
-                        <tbody id="fillPayments">
-
-                        </tbody>
-                    </table>
+        <div class="container">
+            <h2 class="text-center">Agregar servicio</h2>
+            <form id="addServiceForm">
+                <div class="form-group">
+                    <label for="exampleInputEmail1">Nombre del servicio</label>
+                    <input type="text" class="form-control" id="name" aria-describedby="emailHelp" placeholder="Ingresa el nombre del servicio">
                 </div>
-                <h4 id="notPaymentFound">Aun no tienes citas registrados</h4>
 
-            </div>
+                <div class="form-row">
+                    <div class="col">
+                        <label for="exampleInputEmail1">Precio mascotas pequeñas</label>
+                        <input type="text" class="form-control" id="priceP" aria-describedby="emailHelp" placeholder="Ingresa el precio">
+                    </div>
+                    <div class="col">
+                        <label for="exampleInputEmail1">Precio mascotas medianas</label>
+                        <input type="text" class="form-control" id="priceM" aria-describedby="emailHelp" placeholder="Ingresa el precio">
+                    </div>
+                    <div class="col">
+                        <label for="exampleInputEmail1">Precio mascotas grandes</label>
+                        <input type="text" class="form-control" id="priceG" aria-describedby="emailHelp" placeholder="Ingresa el precio">
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="col">
+                        <label for="exampleInputEmail1">Nombre del prestador del servicio</label>
+                        <input type="text" class="form-control" id="namePerson" aria-describedby="emailHelp" placeholder="Ingresa el nombre">
+                    </div>
+                    <div class="col">
+                        <label for="exampleInputEmail1">Tiempo aproximado del servicio</label>
+                        <input type="text" class="form-control" id="time" aria-describedby="emailHelp" placeholder="Ingresa el nombre">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputEmail1">Descripcion del servicio</label>
+                    <input type="text" class="form-control" id="description" aria-describedby="emailHelp" placeholder="Ingresa la descripcion">
+                </div>
+
+                <button type="submit" class="btn btn-primary">Agregar</button>
+            </form>
         </div>
-        <!-- /container-fluid-->
-    </div>
-    <!-- /container-wrapper-->
 
+    </div>
     <!-- Scroll to Top Button-->
     <a class="scroll-to-top rounded" href="#page-top">
         <i class="fa fa-angle-up"></i>
     </a>
-    <!-- Logout Modal-->
-    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
-                    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">×</span>
-            </button>
-                </div>
-                <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
-                <div class="modal-footer">
-                    <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-                    <a class="btn btn-primary" href="login.html">Logout</a>
-                </div>
-            </div>
-        </div>
-    </div>
     <!-- Bootstrap core JavaScript-->
+
     <script src="vendor/jquery/jquery.min.js"></script>
     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <!-- Core plugin JavaScript-->
     <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
     <!-- Page level plugin JavaScript-->
-    <script src="vendor/chart.js/Chart.min.js"></script>
+    <script src="vendor/chart.js/Chart.js"></script>
     <script src="vendor/datatables/jquery.dataTables.js"></script>
     <script src="vendor/datatables/dataTables.bootstrap4.js"></script>
     <script src="vendor/jquery.selectbox-0.2.js"></script>
@@ -144,7 +138,11 @@
     <script src="vendor/jquery.magnific-popup.min.js"></script>
     <!-- Custom scripts for all pages-->
     <script src="js/admin.js"></script>
-    <script src="./js/messages.js"></script>
+    <!-- Custom scripts for this page-->
+    <script src="js/admin-charts.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="./js/addService.js"></script>
+
 </body>
 
 </html>

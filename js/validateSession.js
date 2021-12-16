@@ -10,7 +10,7 @@ const fetchValidate = async() => {
         }
     }
 
-    await fetch('http://localhost:8080/api/auth/validateJWT', fetchData)
+    await fetch('https://empresaurios.herokuapp.com/api/auth/validateJWT', fetchData)
         .then((res) => res.json())
         .then((data) => {
 

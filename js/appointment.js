@@ -13,7 +13,7 @@ const fetchAppointments = async() => {
     });
     swal.showLoading();
 
-    await fetch(`http://localhost:8080/api/payment`, fetchData)
+    await fetch(`https://empresaurios.herokuapp.com/api/payment`, fetchData)
         .then((res) => res.json())
         .then(({ payment }) => {
 
@@ -22,14 +22,29 @@ const fetchAppointments = async() => {
 
                 $('#appointmentsNotFound').attr('style', 'display:none');
                 payment.forEach(pay => {
+
+                    if (pay.status_appointment == "FINALIZADA") {
+                        return $('#fillOrders').append(`
+                        <tr>
+                            <th scope="row">${pay._id}</th>
+                            <td>${pay.date}</td>
+                            <td>${pay.time}</td>
+                            <td>$${pay.amount}MXN</td>
+                            <td>${pay.status}</td>
+                            <td>${pay.status_appointment}</td>
+                            <td> <button onClick=setReview('${pay._id}') type="button" class="btn btn-outline-info">Calificar</button></td>
+                        </tr>`);
+                    }
+
                     $('#fillOrders').append(`
                     <tr>
                         <th scope="row">${pay._id}</th>
                         <td>${pay.date}</td>
                         <td>${pay.time}</td>
-                        <td>$${pay.amount.value}MXN</td>
+                        <td>$${pay.amount}MXN</td>
                         <td>${pay.status}</td>
                         <td>${pay.status_appointment}</td>
+                        <td>Aun no ha finalizado al cita</td>
                     </tr>`);
                 });
             }
@@ -40,3 +55,11 @@ const fetchAppointments = async() => {
 
 
 fetchAppointments();
+
+
+
+const setReview = (id) => {
+
+    window.location = `submit-review.html?id=${id}`;
+
+}

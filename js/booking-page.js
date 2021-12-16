@@ -27,7 +27,7 @@ const fetchPrice = async(id, type) => {
         }
     }
 
-    await fetch(`http://localhost:8080/api/service/${id}`, fetchData)
+    await fetch(`https://empresaurios.herokuapp.com/api/service/${id}`, fetchData)
         .then((res) => res.json())
         .then(({ service }) => {
 
@@ -81,7 +81,7 @@ const fetchPayment = async(orderID, date, time, idService) => {
         })
     }
 
-    await fetch('http://localhost:8080/api/payment', fetchData)
+    await fetch('https://empresaurios.herokuapp.com/api/payment', fetchData)
         .then((res) => res.json())
         .then((data) => {
 

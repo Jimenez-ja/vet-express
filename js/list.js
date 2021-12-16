@@ -11,7 +11,7 @@ const loadServices = async() => {
     });
     swal.showLoading();
 
-    await fetch('http://localhost:8080/api/service', fetchData)
+    await fetch('https://empresaurios.herokuapp.com/api/service', fetchData)
         .then((res) => res.json())
         .then((data) => {
 
