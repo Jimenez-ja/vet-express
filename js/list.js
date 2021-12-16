@@ -47,3 +47,12 @@ const loadServices = async() => {
 
 
 loadServices();
+
+
+
+const logOut = () => {
+
+    localStorage.removeItem('expressvet-token');
+    window.location = './';
+
+}

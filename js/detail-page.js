@@ -178,3 +178,13 @@ const getStarts = (stars) => {
     }
 
 }
+
+
+
+
+const logOut = () => {
+
+    localStorage.removeItem('expressvet-token');
+    window.location = './';
+
+}
