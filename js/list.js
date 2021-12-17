@@ -25,7 +25,7 @@ const loadServices = async() => {
                     <div class="strip_list wow fadeIn">
                     <a href="#0" class="wish_bt"></a>
                     <figure>
-                        <a href="detail-page.html"><img src="http://via.placeholder.com/565x565.jpg" alt=""></a>
+                        <a href="detail-page.html?id=${service._id}>"><img src="http://via.placeholder.com/565x565.jpg" alt=""></a>
                     </figure>
                     <small>${service.namePerson}</small>
                     <h3>${service.name}</h3>
