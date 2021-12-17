@@ -132,7 +132,6 @@ const loadPets = async() => {
                     <div class="card-body">
                         <h5 class="card-title">${pet.name}</h5>
                         <p class="card-text">Raza: ${pet.race} <br> Edad: ${pet.age} <br> Sexo: ${pet.sex}</p>
-                        <a href="./petEdit/${pet._id}" class="btn text-white" style="background-color: #3f4079;">Editar</a>
                     </div>
                 </div>
                 `);
